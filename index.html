@@ -1663,7 +1663,7 @@
     loadDoc("./xml/class_sunday.xml", classXML);
     
 
-    //loadDoc("url-2", myFunction2);
+    loadDoc("./json/class_sunday.json", classJSON);
 
     function loadDoc(url, cFunction) {
       const xhttp = new XMLHttpRequest();
@@ -1686,23 +1686,23 @@
         var instructor = class_list[i].getElementsByTagName("instructor")[0].childNodes[0].nodeValue;
         var duration = class_list[i].getElementsByTagName("duration")[0].childNodes[0].nodeValue;
 
-        html_text += '<div class="class-item d-flex align-items-center">' +
-               '<a href="'+single_page+'" class="class-item-thumbnail">' +
-                 '<img src="'+image+'" alt="Image">' +
-               '</a>' +
-               '<div class="class-item-text">' +
-                 '<span>'+time+'</span>' +
-                 '<h2><a href="'+single_page+'">'+name+'</a></h2>' +
-                 '<span>'+instructor+'</span>,' +
-                 '<span>'+duration+'</span>' +
-               '</div>' +
-             '</div>';
+        html_text +='<div class="class-item d-flex align-items-center">' +
+                    '<a href="'+single_page+'" class="class-item-thumbnail">' +
+                    '<img src="'+image+'" alt="Image">' +
+                    '</a>' +
+                    '<div class="class-item-text">' +
+                    '<span>'+time+'</span>' +
+                    '<h2><a href="'+single_page+'">'+name+'</a></h2>' +
+                    '<span>'+instructor+'</span>,' +
+                    '<span>'+duration+'</span>' +
+                    '</div>' +
+                    '</div>';
       }
       console.log(html_text);
       document.getElementById("nav-sunday").children[0].children[0].innerHTML = html_text;
 
     }
-    function myFunction2(xhttp) {
+    function classJSON(xhttp) {
       // action goes here
     }    
 
