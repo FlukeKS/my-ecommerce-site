@@ -7,9 +7,9 @@ const app = express();
 app.use(express.static(__dirname));
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html"))
+    res.sendFile(path.join(__dirname));
 });
 
 app.listen(3000,() => {
-    console.log("Sever running at http://localhost:3000");
-})
+    console.log('Server running at http://localhost:3000');
+});
